@@ -1,2 +1,1 @@
-#CrudApp
-##A simple CRUD react-native app with js networking with fetch.
+A simple CRUD react-native app with js networking with fetch.
