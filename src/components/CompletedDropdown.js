@@ -1,34 +1,7 @@
 import React, { useState } from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {ActivityIndicator, StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
-
-const styles = StyleSheet.create({
-  container : {
-    marginTop: 12,
-    padding: 12,
-    
-  },
-  space: {
-    width: 20, 
-    height: 20,
-  },
-  titleText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: 'grey',
-  },
-  button: {
-    marginTop: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10,
-    borderRadius: 10,
-    backgroundColor: '#a9a9a9',
-  },
-  buttonText:{
-    color: 'white'
-  }
-});
+import {ActivityIndicator, View, Text, TouchableOpacity, Alert } from 'react-native';
+import {styles} from '../css/styles'
 
 function CompletedDropdown({id, todo, completed, userId}){
   const [isLoading, setLoading] = useState(false);
@@ -88,7 +61,7 @@ function CompletedDropdown({id, todo, completed, userId}){
   
   
   return (
-    <View style={styles.container}>
+    <View style={styles.dropdown_container}>
     <View style={styles.space}/> 
     <Text style={styles.titleText}>{"Todo Name:"}</Text> 
     <View style={styles.space}/> 
@@ -116,7 +89,7 @@ function CompletedDropdown({id, todo, completed, userId}){
     }
     />
     <View style={styles.space}/>
-    <TouchableOpacity onPress = {onPressed} style={styles.button}>
+    <TouchableOpacity onPress = {onPressed} style={styles.update_button}>
             <Text style={styles.buttonText}>Update</Text>
     </TouchableOpacity>
     <View style={styles.space}/>
