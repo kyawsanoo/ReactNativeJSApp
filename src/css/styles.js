@@ -24,6 +24,10 @@ export const styles = StyleSheet.create({
     padding: 5,
     alignItems: 'center',
   },
+  empty_container: {
+    flex: 1,
+   
+  },
   appTitleText: {
     color: '#000',
     fontSize: 14,
