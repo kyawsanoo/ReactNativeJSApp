@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.firstapp"
+    namespace "com.crudapp"
     defaultConfig {
-        applicationId "com.firstapp"
+        applicationId "com.crudapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

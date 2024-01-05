@@ -1,4 +1,4 @@
-package com.firstapp;
+package com.crudapp;
 
 import android.app.Application;
 import android.content.res.Configuration;
