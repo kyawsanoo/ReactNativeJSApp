@@ -3,6 +3,9 @@ import {
 	Alert,ActivityIndicator, View, TextInput, TouchableOpacity,
 	Text, StyleSheet
 } from 'react-native';
+import {styles} from '../css/styles';
+
+
 const CreateNewTodoScreen = ({ navigation, route }) => {
 	const [todoTitle, setTodoTitle] = useState('');
 	const [errors, setErrors] = useState({});
@@ -58,9 +61,9 @@ const CreateNewTodoScreen = ({ navigation, route }) => {
 
 
 	return (
-		<View style={styles.container}>
+		<View style={styles.create_container}>
 			<Text style={styles.todoTitle}>{"Enter todo title"}</Text>
-			<View style={styles.space}/>  
+			<View style={styles.create_space}/>  
 			<TextInput
 				style={styles.input}
 				placeholder="Todo Title"
@@ -68,7 +71,7 @@ const CreateNewTodoScreen = ({ navigation, route }) => {
 				onChangeText={setTodoTitle}
 			/>
 			<TouchableOpacity
-				style={[styles.button, { opacity: isFormValid ? 1 : 0.5 }]}
+				style={[styles.create_button, { opacity: isFormValid ? 1 : 0.5 }]}
 				disabled={!isFormValid}
 				onPress={async () => {
 					
@@ -82,7 +85,7 @@ const CreateNewTodoScreen = ({ navigation, route }) => {
 					}
 				}}
 			>
-				<Text style={styles.buttonText}>Create</Text>
+				<Text style={styles.create_buttonText}>Create</Text>
 			</TouchableOpacity>
 
 			{/* {Object.values(errors).map((error, index) => (
@@ -98,48 +101,5 @@ const CreateNewTodoScreen = ({ navigation, route }) => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		marginTop: 40,
-		padding: 10,
-		justifyContent: 'top',
-		//alignItems: "center",
-	},
-	input: {
-		height: 45,
-		borderColor: '#ccc',
-		borderWidth: 1,
-		marginBottom: 12,
-		paddingHorizontal: 10,
-		borderRadius: 8,
-		fontSize: 16,
-	},
-	button: {
-		backgroundColor: '#a9a9a9',
-		borderRadius: 10,
-		paddingVertical: 10,
-		alignItems: 'center',
-		marginTop: 16,
-		marginBottom: 12,
-	},
-	buttonText: {
-		color: 'white',
-		fontWeight: 'bold',
-		fontSize: 16,
-	},
-	error: {
-		color: 'black',
-		fontSize: 16,
-		marginBottom: 12,
-	},
-	space: {
-		width: 10, 
-		height: 10,
-	},
-	  
-});
-
 
 export default CreateNewTodoScreen;

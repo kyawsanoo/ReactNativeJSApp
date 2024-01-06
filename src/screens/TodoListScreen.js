@@ -167,6 +167,10 @@ function TodoListScreen  ({navigation}) {
         setRefreshing(false);
     }
 
+    const EmptyContainer = () => {
+      return (<View style={styles.empty_container}><Text>{"List is empty. Please create to do."}</Text></View>);
+    }
+
     useEffect(() => {
       getTodos();
     }, []);
@@ -185,6 +189,7 @@ function TodoListScreen  ({navigation}) {
             onRefresh={handleRefresh}
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
+            ListEmptyComponent={EmptyContainer()}
             keyExtractor={({id}) => id}
             renderItem={({item}) => (
                 
