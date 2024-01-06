@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView, ActivityIndicator, StyleSheet, FlatList, TouchableOpacity, Button,
+import {ActivityIndicator, StyleSheet, FlatList, TouchableOpacity, Button,
     Text, View, Alert} from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
 
 const styles = StyleSheet.create({
   indicator: {
@@ -161,7 +162,6 @@ function TodoListScreen  ({navigation}) {
     }
 
     const handleRefresh = async() => {
-        setData([]);
         setRefreshing(true);
         getTodos();
         setRefreshing(false);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {SafeAreaView} from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
 
 import CompletedDropdown from '../components/CompletedDropdown';
 

@@ -1,5 +1,5 @@
 {
-  "name": "first_app",
+  "name": "crud_app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-native-picker/picker": "^2.6.1",
+    "@react-native-picker/picker": "2.4.10",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
-    "expo": "~49.0.15",
+    "expo": "^49.0.21",
     "expo-dev-client": "~2.4.12",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",

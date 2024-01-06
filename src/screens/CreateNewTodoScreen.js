@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-	Alert,ActivityIndicator, SafeAreaView, View, TextInput, TouchableOpacity,
+	Alert,ActivityIndicator, View, TextInput, TouchableOpacity,
 	Text, StyleSheet
 } from 'react-native';
 const CreateNewTodoScreen = ({ navigation, route }) => {
