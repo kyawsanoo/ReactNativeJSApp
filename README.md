@@ -2,7 +2,7 @@
 A simple CRUD react-native app with js, networking with fetch.
 
 # How to start the app
-use "npm install" and then "npx expo start" commands.
+use "npx expo install" and then "npx expo start" commands.
 
 # api info
 https://dummyjson.com/docs/todos

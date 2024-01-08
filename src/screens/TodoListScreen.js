@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {ActivityIndicator, StyleSheet, FlatList, TouchableOpacity, Button,
     Text, View, Alert} from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 const styles = StyleSheet.create({
   indicator: {
